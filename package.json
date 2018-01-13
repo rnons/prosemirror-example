@@ -1,0 +1,35 @@
+{
+  "name": "prosemirror-example",
+  "private": true,
+  "scripts": {
+    "build": "webpack -p --progress",
+    "start": "webpack-dev-server --progress --hot"
+  },
+  "dependencies": {
+    "hyperapp": "^1.0.1",
+    "prosemirror-commands": "^1.0.3",
+    "prosemirror-example-setup": "^1.0.1",
+    "prosemirror-keymap": "^1.0.0",
+    "prosemirror-model": "^1.1.0",
+    "prosemirror-schema-basic": "^1.0.0",
+    "prosemirror-schema-list": "^1.0.0",
+    "prosemirror-state": "^1.0.2",
+    "prosemirror-view": "^1.0.8"
+  },
+  "devDependencies": {
+    "@types/prosemirror-commands": "^1.0.0",
+    "@types/prosemirror-keymap": "^1.0.0",
+    "@types/prosemirror-model": "^1.1.0",
+    "@types/prosemirror-schema-basic": "^1.0.0",
+    "@types/prosemirror-schema-list": "^1.0.0",
+    "@types/prosemirror-state": "^1.0.0",
+    "@types/prosemirror-view": "^1.0.0",
+    "awesome-typescript-loader": "^3.4.1",
+    "css-loader": "^0.28.8",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.19.1",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "2.9.7"
+  }
+}
