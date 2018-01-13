@@ -1,0 +1,14 @@
+{
+  "defaultSeverity": "error",
+  "jsRules": {},
+  "rules": {
+    "no-unused-variable": true,
+    "ordered-imports": [
+      true,
+      {
+        "named-imports-order": "lowercase-last"
+      }
+    ]
+  },
+  "rulesDirectory": []
+}

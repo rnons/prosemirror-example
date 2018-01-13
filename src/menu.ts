@@ -1,13 +1,12 @@
-import { h, app } from "hyperapp";
+import { app, h } from "hyperapp";
 import {
-  baseKeymap,
-  toggleMark,
   setBlockType,
+  toggleMark,
   wrapIn
 } from "prosemirror-commands";
-import { schema } from "prosemirror-schema-basic";
 import { DOMSerializer } from "prosemirror-model";
-import { EditorState, Plugin, Transaction } from "prosemirror-state";
+import { schema } from "prosemirror-schema-basic";
+import { EditorState } from "prosemirror-state";
 import { EditorView } from "prosemirror-view";
 
 type Item = {

@@ -1,13 +1,12 @@
-import OrderedMap = require("orderedmap");
-
-import { EditorState, Plugin, Transaction } from "prosemirror-state";
-import { EditorView } from "prosemirror-view";
-import { Schema, DOMParser, NodeSpec } from "prosemirror-model";
-import { schema } from "prosemirror-schema-basic";
 import { baseKeymap } from "prosemirror-commands";
 import { keymap } from "prosemirror-keymap";
+import { DOMParser } from "prosemirror-model";
+import { schema } from "prosemirror-schema-basic";
+import { EditorState, Transaction } from "prosemirror-state";
+import { EditorView } from "prosemirror-view";
 
 import { initMenu } from "./menu";
+
 import "./main.css";
 
 const $editor = document.querySelector("#editor");
