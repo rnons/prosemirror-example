@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .EditorContainer {
   border: 1px solid gray;
 }
@@ -11,8 +15,9 @@
 }
 
 .MenuItem {
-  width: 1.5rem;
+  min-width: 1.5rem;
   line-height: 1.25rem;
+  padding: 0 0.25rem;
   text-align: center;
   cursor: pointer;
 }

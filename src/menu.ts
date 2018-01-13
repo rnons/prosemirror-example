@@ -6,6 +6,7 @@ import {
   wrapIn
 } from "prosemirror-commands";
 import { schema } from "prosemirror-schema-basic";
+import { DOMSerializer } from "prosemirror-model";
 import { EditorState, Plugin, Transaction } from "prosemirror-state";
 import { EditorView } from "prosemirror-view";
 
@@ -28,6 +29,14 @@ const heading = (level: number) => ({
   command: setBlockType(schema.nodes.heading, { level })
 });
 
+const domSerializer = DOMSerializer.fromSchema(schema);
+const toHtml = (editorState: EditorState) => {
+  const fragment = domSerializer.serializeFragment(editorState.doc.content);
+  const div = document.createElement("div");
+  div.appendChild(fragment);
+  return div.innerHTML;
+};
+
 const items: Array<Item> = [
   {
     text: "B",
@@ -47,6 +56,15 @@ const items: Array<Item> = [
   {
     text: ">",
     command: wrapIn(schema.nodes.blockquote)
+  },
+  {
+    text: "toHtml",
+    command: (editorState: EditorState, dispatch: any) => {
+      if (dispatch) {
+        console.log(toHtml(editorState));
+      }
+      return true;
+    }
   }
 ];
 
